@@ -924,7 +924,7 @@ When a new user is created, nextcloud already has some files. They are copied fr
 
 Create directory for Skeleton directory
 ```bash
-sudo install -o www-data -g www-data -m 0750 -d /opt/nextcloud_skeleton
+sudo install -o root -g www-data -m 0770 -d /opt/nextcloud_skeleton
 ```
 Add line to config
 ```bash
