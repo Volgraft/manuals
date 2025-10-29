@@ -99,20 +99,20 @@ sudo vim /etc/netplan/50-cloud-init.yaml
 ```
 ```
 network:
-  version: 2
-  renderer: networkd
-  ethernets:
-    ens160:
-      dhcp4: no
-      addresses:
-        - 12.34.56.100/24
-      routes:
-        - to: 0.0.0.0/0
-          via: 12.34.56.1
-      nameservers:
-        addresses:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens160:
+      dhcp4: no
+      addresses:
+        - 12.34.56.100/24
+      routes:
+        - to: 0.0.0.0/0
+          via: 12.34.56.1
+      nameservers:
+        addresses:
           - 12.34.56.4
-          - 8.8.8.8
+          - 8.8.8.8
 ```
 Test apply the config and check the connection with a 15-second test and check ping to new ip in these 15 sec
 ```bash
